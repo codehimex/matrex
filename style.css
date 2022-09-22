@@ -1,0 +1,434 @@
+/* #00B0FF , #212529 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #212529;
+}
+.up{
+    position: fixed;
+    bottom: 10px;
+    right: -50px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #00B0FF;
+    cursor: pointer;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.up.show{
+    right: 10px;
+}
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 55;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: #ffffff2a;
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 1rem 1rem;
+}
+nav .logo{
+    color: white;
+    border-left: #00B0FF solid 25px;
+    padding-left: 8px;
+    border-radius: 4px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+nav li a{
+    color: white;
+    text-decoration: none;
+    padding: 0 40px;
+    transition: 0.4s ease;
+}
+nav li a:hover{
+    background-color: #ffffff18;
+    height: 100vh;
+    padding: 38px 20px;
+    border-top: #00B0FF 4px solid;
+}
+nav button{
+    background-color: #00B0FF;
+    color: white;
+    border: 0;
+    padding: 10px 32px;
+    border-radius: 4px;
+    margin-left: 40px;
+    box-shadow: 1px 1px 17px #00B0FF;
+    cursor: pointer;
+}
+#open{
+    display: none;
+}
+#toggle{
+    display: none;
+}
+@media screen and (max-width:1000px){
+    nav{
+        padding: 20px 40px;
+    }
+    nav ul{
+        display: none;
+    }
+    nav button{
+        display: none;
+    }
+    #open{
+        display: block;
+        color: white;
+        background-color: #00B0FF;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    nav .logo{
+        font-size: 20px;
+    }
+    #toggle{
+        display: block;
+        position: fixed;
+        z-index: 99999999;
+        background-color: #ffffff1d;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.6s ease;
+        transform: translate(100vw);
+    }
+    #toggle #close{
+        position: absolute;
+        right: 37px;
+        padding: 10px;
+        background-color: #00B0FF;
+        color: white;
+        border-radius: 4px;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    #toggle h1{
+        padding-top: 180px;
+        color: #00B0FF;
+        padding-bottom: 10px;
+        font-size: 42px;
+    }
+    #toggle .links{
+        line-height: 50px;
+    }
+    #toggle a{
+        color: white;
+        text-decoration: none;
+        transition: 0.2s ease;
+    }
+    #toggle p{
+        color: white;
+        padding-top: 100px;
+    }
+    #toggle .icon{
+        padding-top: 20px;
+    }
+    #toggle span{
+        color: #00B0FF;
+    }
+    #toggle a:hover{
+        background-color: #00B0FF;
+        font-size: 18px;
+        padding: 8px 20px;
+        border-radius: 1rem;
+    }
+#toggle ion-icon{
+    color: white;
+    background-color: #f3f2f27c;
+    text-align: center;
+    padding: 12px;
+    border-radius: 100%;
+    font-size: 20px;
+    margin: 8px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+#toggle ion-icon:hover{
+    font-size: 28px;
+    color: #00B0FF;
+    transform: rotate(8deg);
+}
+}
+.home{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+}
+.home .text{
+    display: flex;
+    align-items: center;
+}
+.home .icons{
+    line-height: 60px;
+    padding-right: 32px;
+}
+.home .icons ion-icon{
+    color: white;
+    background-color: #f3f2f27c;
+    text-align: center;
+    padding: 12px;
+    border-radius: 100%;
+    font-size: 25px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.icons ion-icon:hover{
+    background-color: #f3f2f2d4;
+}
+.home .txt h1{
+    padding-bottom: 20px;
+    font-size: 64px;
+    color: white;
+}
+.home .txt h1 a{
+    text-decoration: none;
+    color: #00B0FF;
+}
+.home .txt p{
+    color: white;
+}
+.home button{
+    background-color: #00B0FF;
+    color: white;
+    padding: 12px 26px;
+    border: 0;
+    margin-top: 22px;
+    font-size: 18px;
+    transition: 0.4s ease;
+}
+.home .image img{
+    width: 460px;
+    margin-left: 200px;
+}
+@media screen and (max-width:1200px){
+    .home{
+        display: block;
+        justify-content: center;
+        text-align: center;
+        padding-top: 120px;
+    }
+    .icons{
+        display: none;
+    }
+    .image img{
+        display: none;
+    }
+}
+#about{
+    text-align: center;
+}
+.head h1{
+    color: #00B0FF;
+    font-size: 32px;
+    padding: 12px;
+}
+.head p{
+    color: white;
+    padding: 0 480px;
+}
+.boxs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 160px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    text-align: left;
+    border: #00B0FF 2px solid;
+    color: white;
+    border-radius: 6px;
+    margin: 20px;
+}
+@media screen and (max-width:1200px){
+    .item{
+        display: block;
+        text-align: center;
+        width: 90%;
+        padding: 20px;
+    }
+    .item h1{
+        padding: 15px 0;
+    }
+}
+#pri{
+    text-align: center;
+}
+.items{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+.box{
+    background-color: #353c42;
+    padding: 20px;
+    width: 30%;
+    margin: 20px;
+    color: white;
+    border-radius: 6px;
+}
+.box h1{
+    font-size: 70px;
+}
+.box p{
+    font-size: 16px;
+    padding-bottom: 18px;
+    font-family: system-ui;
+    font-weight: 200;
+}
+.o5{
+    display: flex;
+}
+.o5 ion-icon{
+    color: #12f912;
+    font-size: 20px;
+}
+.o5 p{
+    font-weight: 600;
+    padding-left: 5px;
+}
+.box button{
+    background-color: #00B0FF;
+    color: white;
+    padding: 12px 0;
+    width: 90%;
+    border: 0;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+@media screen and (max-width:1400px){
+    .head p{
+        padding: 0 10px;
+    }
+    .box{
+        width: 90%;
+    }
+}
+body::-webkit-scrollbar {
+    width: 1em;
+    background-color: #717a7a
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffffff6b;
+    box-shadow: 0 0 30px 30px #ffffff6b
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    padding-top: 80px;
+}
+.image img{
+    width: 350px;
+}
+.inputs{
+    background-color: #494d51;
+    padding: 25px;
+    width: 40%;
+}
+.inputs input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 4px;
+    border: 0;
+    background-color: white;
+    outline: none;
+    color: #212529;
+    font-size: 16px;
+}
+.inputs textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 4px;
+    border: 0;
+    background-color: white;
+    outline: none;
+    color: #212529;
+    font-size: 16px;
+}
+.inputs button{
+    background-color: #00B0FF;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+footer{
+    background-color: #2c2e31;
+    color: white;
+    padding: 28px;
+    text-align: center;
+    margin-top: 120px;
+}
+footer ion-icon{
+    color: white;
+    background-color: #f3f2f27c;
+    text-align: center;
+    padding: 12px;
+    border-radius: 100%;
+    font-size: 20px;
+    margin: 14px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+footer p{
+    color: white;
+}
+footer a{
+    text-decoration: none;
+    color: #00B0FF;
+}
+@media screen and (max-width:1200px){
+    .contact{
+        width: 90%;
+    }
+    .inputs{
+        width: 100%;
+    }
+}
